@@ -1,10 +1,10 @@
 import { Logger } from '@nestjs/common';
-import { ILogAdapter } from './interface/log-adapter.interface.ts';
+import { ILogAdapter } from './interface/log-adapter.interface.ts.js';
 
 export class LoggerAdapter implements ILogAdapter {
   private readonly logger = new Logger('AppLogger');
 
-  info(message: string, context?: string) {
+  log(message: string, context?: string) {
     this.logger.log(message, context);
   }
 
